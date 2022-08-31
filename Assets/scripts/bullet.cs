@@ -5,12 +5,13 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
     public Rigidbody rb;
-    public float bulletspeed;
+    public float bulletforce;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.velocity = transform.TransformDirection(Vector3.forward * bulletspeed);
+        rb.AddForce(transform.forward*bulletforce,ForceMode.Impulse);
+        // = transform.TransformDirection(Vector3.forward * bulletspeed);
         // Update is called once per frame
     }
 

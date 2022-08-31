@@ -22,7 +22,7 @@ public class tabanca : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space));
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(mermii, atesN.position, atesN.rotation);
         }
