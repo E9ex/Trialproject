@@ -18,7 +18,11 @@ public class bullet : MonoBehaviour
 
     void Update()
     {
-        
+        RaycastHit temas;
+        if (Physics.Raycast(transform.position,transform.forward,out temas,3.0f))
+        {
+            Debug.Log("vurdu gol oldusanırım");
+        }
     }
     public void OnCollisionEnter2D(Collision2D col)
     {
