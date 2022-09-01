@@ -9,6 +9,7 @@ public class tabanca : MonoBehaviour
     public Transform atesN;
 
     public GameObject mermii;
+    public GameObject mermiiz;
     private void Awake()
     {
         
@@ -25,6 +26,8 @@ public class tabanca : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(mermii, atesN.position, atesN.rotation);
+            Instantiate(mermiiz, atesN.position, Quaternion.LookRotation(atesN.forward));
         }
+       
     }
 }
