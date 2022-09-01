@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   bulletforce: 50
-  mermiiz: {fileID: 5728328465106297371}
+  mermiizz: {fileID: 0}
 --- !u!54 &-1605000992290999928
 Rigidbody:
   m_ObjectHideFlags: 0

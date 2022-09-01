@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class bullet : MonoBehaviour
@@ -19,18 +17,18 @@ public class bullet : MonoBehaviour
     void Update()
     {
         RaycastHit temas;
-        if (Physics.Raycast(transform.position,transform.forward,out temas,3.0f))
+        if (Physics.Raycast(transform.position,transform.forward,out temas,3.0f)) //Güzel bir başlangıç burdan yürüyebilirsin. Fakat buraya gerek kalmadan alttaki collider kısmından çözebilirsin.
         {
             Debug.Log("vurdu gol oldusanırım");
         }
     }
-    public void OnCollisionEnter2D(Collision2D col)
+    public void OnCollisionEnter2D(Collision2D col)//Güzel bir başlangıç fakat senin collider'ın 3D bu method'un 3d versionunu kullanman gerekiyor
     {
-        if (col.gameObject.tag == "target")
+        if (col.gameObject.tag == "target")//Kod yazarken alttaki gibi boşluk bırakmamaya çalış :)
 
 
         {
-            rb.isKinematic = true;
+            rb.isKinematic = true;// gayet doğru
             rb.velocity=Vector3.zero;
         }
     }
