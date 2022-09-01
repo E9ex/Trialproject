@@ -20,4 +20,14 @@ public class bullet : MonoBehaviour
     {
         
     }
+    public void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "target")
+
+
+        {
+            rb.isKinematic = true;
+            rb.velocity=Vector3.zero;
+        }
+    }
 }

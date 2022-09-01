@@ -3,7 +3,9 @@ guid: 1895ead51bfe44c009aea899414ccf69
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rb: {instanceID: 0}
+  - mermiiz: {fileID: 5728328465106297371, guid: c6f2d1889936fcd45ad69630ca758a6e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
