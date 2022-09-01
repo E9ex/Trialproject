@@ -6,7 +6,7 @@ public class bullet : MonoBehaviour
 {
     public Rigidbody rb;
     public float bulletforce;
-    public GameObject mermiiz;
+    public GameObject mermiizz;
 
     void Start()
     {

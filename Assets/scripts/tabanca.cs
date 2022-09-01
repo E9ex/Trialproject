@@ -8,7 +8,7 @@ public class tabanca : MonoBehaviour
     
     public Transform atesN;
 
-    public GameObject mermii;
+   
     public GameObject mermiiz;
     private void Awake()
     {
