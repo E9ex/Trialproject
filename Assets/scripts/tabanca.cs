@@ -25,7 +25,7 @@ public class tabanca : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(mermii, atesN.position, atesN.rotation);
+           
             Instantiate(mermiiz, atesN.position, Quaternion.LookRotation(atesN.forward));
         }
        
