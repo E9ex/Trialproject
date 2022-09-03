@@ -30,6 +30,23 @@ public class hareketet : MonoBehaviour
         {
             transform.Translate(0,0,-1*Time.deltaTime);
         }
+        if (Input.GetKey(KeyCode.G))
+        {
+            transform.Rotate(0,1*Time.maximumParticleDeltaTime,0);
+        }
+        if (Input.GetKey(KeyCode.H))
+        {
+            transform.Rotate(0,-1*Time.maximumParticleDeltaTime,0);
+        }
+        if (Input.GetKey(KeyCode.O))
+        {
+            transform.Rotate(0,0,1*Time.maximumParticleDeltaTime);
+        }
+        if (Input.GetKey(KeyCode.L))
+        {
+            transform.Rotate(0,0,-1*Time.maximumParticleDeltaTime);
+        }
+        
         
       //  top.Rotate(0,Input.GetAxis("Horizontal"),0);
     }

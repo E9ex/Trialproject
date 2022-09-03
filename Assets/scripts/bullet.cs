@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
     public Rigidbody rb;
     public float bulletforce;
-    public GameObject mermiizz;
+  //  public GameObject mermiizz;
 
     void Start()
     {
@@ -16,13 +17,26 @@ public class bullet : MonoBehaviour
 
     void Update()
     {
-        RaycastHit temas;
+      /*  RaycastHit temas;
         if (Physics.Raycast(transform.position,transform.forward,out temas,3.0f)) //Güzel bir başlangıç burdan yürüyebilirsin. Fakat buraya gerek kalmadan alttaki collider kısmından çözebilirsin.
         {
             Debug.Log("vurdu gol oldusanırım");
         }
+        */
     }
-    public void OnCollisionEnter2D(Collision2D col)//Güzel bir başlangıç fakat senin collider'ın 3D bu method'un 3d versionunu kullanman gerekiyor
+
+
+    public void OnCollisionEnter(Collision other)
+    
+    {
+        if (other.gameObject.CompareTag("hedef"));
+        {
+            rb.isKinematic = false;
+            rb.useGravity = false;
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+        }
+    }
+    /* public void OnCollisionEnter2D(Collision2D col)//Güzel bir başlangıç fakat senin collider'ın 3D bu method'un 3d versionunu kullanman gerekiyor
     {
         if (col.gameObject.tag == "target")//Kod yazarken alttaki gibi boşluk bırakmamaya çalış :)
 
@@ -31,5 +45,7 @@ public class bullet : MonoBehaviour
             rb.isKinematic = true;// gayet doğru
             rb.velocity=Vector3.zero;
         }
+        */
     }
-}
+
+
