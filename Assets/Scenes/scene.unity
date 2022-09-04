@@ -608,6 +608,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -681,6 +682,20 @@ Transform:
   m_Father: {fileID: 2025849833}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 13.906, y: 278.391, z: 4.303}
+--- !u!64 &963194229
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &996701392
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,8 +968,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1108194367}
   - component: {fileID: 1108194369}
-  - component: {fileID: 1108194368}
   - component: {fileID: 1108194370}
+  - component: {fileID: 1108194371}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: hedef
@@ -977,19 +992,6 @@ Transform:
   m_Father: {fileID: 1809878994}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!65 &1108194368
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108194366}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1108194369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1020,6 +1022,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &1108194371
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108194366}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1260641816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,8 +1421,8 @@ GameObject:
   - component: {fileID: 1809878994}
   - component: {fileID: 1809878993}
   - component: {fileID: 1809878992}
-  - component: {fileID: 1809878991}
   - component: {fileID: 1809878990}
+  - component: {fileID: 1809878995}
   m_Layer: 0
   m_Name: Bow
   m_TagString: hedef
@@ -1428,19 +1444,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1108194367}
   arrowPrefab: {fileID: 5728328465106297371, guid: c6f2d1889936fcd45ad69630ca758a6e, type: 3}
---- !u!65 &1809878991
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809878989}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1809878992
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1507,6 +1510,20 @@ Transform:
   m_Father: {fileID: 2025849833}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 3.018, y: 0, z: -85.96}
+--- !u!64 &1809878995
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809878989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6937701791748013656, guid: c6d96b4c9f6cf6b48b596f09a73f63a0, type: 3}
 --- !u!1 &1819286915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,6 +1606,7 @@ GameObject:
   - component: {fileID: 2025849830}
   - component: {fileID: 2025849834}
   - component: {fileID: 2025849835}
+  - component: {fileID: 2025849836}
   m_Layer: 0
   m_Name: adam
   m_TagString: hedef
@@ -1707,3 +1725,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   adam: {fileID: 2025849829}
   mesaf: {x: 0, y: 0, z: 0}
+--- !u!64 &2025849836
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025849829}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
