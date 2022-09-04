@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -156,10 +156,10 @@ RectTransform:
   m_Father: {fileID: 1061282183}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.65, y: 4.59}
-  m_SizeDelta: {x: 19.08, y: 2.1}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -67.86}
+  m_SizeDelta: {x: 133.72, y: 2.0999756}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &278239904
 MonoBehaviour:
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'puan:'
+  m_text: 'POINTS: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -208,15 +208,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2
-  m_fontSizeBase: 2
+  m_fontSize: 24.05
+  m_fontSizeBase: 24.05
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -480,10 +480,9 @@ GameObject:
   - component: {fileID: 746262008}
   - component: {fileID: 746262007}
   - component: {fileID: 746262010}
-  - component: {fileID: 746262011}
   m_Layer: 0
   m_Name: sari
-  m_TagString: sari
+  m_TagString: hedef
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -583,20 +582,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &746262011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746262005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1895ead51bfe44c009aea899414ccf69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1108194370}
-  bulletforce: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,7 +634,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 99
+  field of view: 114
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -674,28 +659,40 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.072356716, y: 0.6506418, z: 0.11311943, w: -0.7474181}
-  m_LocalPosition: {x: 0.094, y: -0.62, z: 0.05}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 0.094, y: -0.62, z: 0.35}
   m_LocalScale: {x: 1.03955, y: -1.0640876, z: 0.5640599}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2025849833}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 13.906, y: 278.391, z: 4.303}
---- !u!64 &963194229
-MeshCollider:
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6ca9d3f4ee9c44588612843aad57d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ilkros: {x: 0, y: 0, z: 0}
+  ilkross: {x: 0, y: 0, z: 0}
+  sonrosa: {x: 0, y: 0, z: 0}
+  sonros: {x: 0, y: 0, z: 0}
+  puan: 0
+  puangoster: {fileID: 0}
+  top: {fileID: 0}
+  camera: {fileID: 963194228}
+  playerBody: {fileID: 2025849833}
+  sideMovementSpeed: 0
+  forwardMovementSpeed: 0
+  rotationSpeed: 0
+  lastMouseRot: {x: 0, y: 0, z: 0}
+  egeRotationSpeed: 100
 --- !u!1 &996701392
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,10 +706,9 @@ GameObject:
   - component: {fileID: 996701395}
   - component: {fileID: 996701394}
   - component: {fileID: 996701397}
-  - component: {fileID: 996701398}
   m_Layer: 0
   m_Name: kirmizi
-  m_TagString: kirmizi
+  m_TagString: hedef
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -812,20 +808,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &996701398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996701392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1895ead51bfe44c009aea899414ccf69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1108194370}
-  bulletforce: 0
 --- !u!1 &1014025253
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,17 +887,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1061282182
 Canvas:
   m_ObjectHideFlags: 0
@@ -925,7 +907,7 @@ Canvas:
   m_GameObject: {fileID: 1061282179}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -944,9 +926,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061282179}
-  m_LocalRotation: {x: -0, y: -0.69151014, z: -0, w: 0.72236675}
-  m_LocalPosition: {x: 0, y: 0, z: 1.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 278239903}
@@ -955,9 +937,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -87.5, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 40.8, y: 7.4}
-  m_SizeDelta: {x: 168.3, y: 41.3}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1108194366
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,9 +949,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1108194367}
-  - component: {fileID: 1108194369}
-  - component: {fileID: 1108194370}
-  - component: {fileID: 1108194371}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: hedef
@@ -992,50 +971,6 @@ Transform:
   m_Father: {fileID: 1809878994}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &1108194369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108194366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1895ead51bfe44c009aea899414ccf69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1108194370}
-  bulletforce: 0
---- !u!54 &1108194370
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108194366}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!64 &1108194371
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108194366}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &1260641816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,10 +1081,9 @@ GameObject:
   - component: {fileID: 1359591991}
   - component: {fileID: 1359591990}
   - component: {fileID: 1359591993}
-  - component: {fileID: 1359591994}
   m_Layer: 0
   m_Name: siyah
-  m_TagString: siyah
+  m_TagString: hedef
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1249,20 +1183,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1359591994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359591988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1895ead51bfe44c009aea899414ccf69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1108194370}
-  bulletforce: 0
 --- !u!1 &1593904490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,10 +1197,9 @@ GameObject:
   - component: {fileID: 1593904493}
   - component: {fileID: 1593904491}
   - component: {fileID: 1593904497}
-  - component: {fileID: 1593904498}
   m_Layer: 0
   m_Name: mavi
-  m_TagString: mavi
+  m_TagString: hedef
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1396,20 +1315,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1593904498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593904490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1895ead51bfe44c009aea899414ccf69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1108194370}
-  bulletforce: 0
 --- !u!1 &1809878989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,7 +1327,6 @@ GameObject:
   - component: {fileID: 1809878993}
   - component: {fileID: 1809878992}
   - component: {fileID: 1809878990}
-  - component: {fileID: 1809878995}
   m_Layer: 0
   m_Name: Bow
   m_TagString: hedef
@@ -1510,20 +1414,6 @@ Transform:
   m_Father: {fileID: 2025849833}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 3.018, y: 0, z: -85.96}
---- !u!64 &1809878995
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809878989}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6937701791748013656, guid: c6d96b4c9f6cf6b48b596f09a73f63a0, type: 3}
 --- !u!1 &1819286915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,7 +1444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1605,8 +1494,6 @@ GameObject:
   - component: {fileID: 2025849831}
   - component: {fileID: 2025849830}
   - component: {fileID: 2025849834}
-  - component: {fileID: 2025849835}
-  - component: {fileID: 2025849836}
   m_Layer: 0
   m_Name: adam
   m_TagString: hedef
@@ -1623,7 +1510,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 2025849829}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -1685,7 +1572,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025849829}
-  m_LocalRotation: {x: 0.00007927365, y: -0.004537707, z: -0.00785414, w: 0.9999589}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 68.4, y: 2.54, z: 0.4000001}
   m_LocalScale: {x: 1, y: -2.44, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1695,7 +1582,7 @@ Transform:
   - {fileID: 1014025254}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0.005, y: -0.52, z: -0.9}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &2025849834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1703,39 +1590,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025849829}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6ca9d3f4ee9c44588612843aad57d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ilkros: {x: 0, y: 0, z: 0}
+  ilkross: {x: 0, y: 0, z: 0}
+  sonrosa: {x: 0, y: 0, z: 0}
+  sonros: {x: 0, y: 0, z: 0}
   puan: 0
   puangoster: {fileID: 0}
   top: {fileID: 1014025254}
---- !u!114 &2025849835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025849829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 419e4c32cd4ce46168819c34b9b4152b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adam: {fileID: 2025849829}
-  mesaf: {x: 0, y: 0, z: 0}
---- !u!64 &2025849836
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025849829}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  camera: {fileID: 963194228}
+  playerBody: {fileID: 2025849833}
+  sideMovementSpeed: 5
+  forwardMovementSpeed: 5
+  rotationSpeed: 5
+  lastMouseRot: {x: 0, y: 0, z: 0}
+  egeRotationSpeed: 100

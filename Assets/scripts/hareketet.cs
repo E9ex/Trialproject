@@ -5,92 +5,110 @@ using UnityEngine.UI;
 
 public class hareketet : MonoBehaviour
 {
-    public Vector3 ilkros,ilkross,sonross ,sonros;
+    public Vector3 ilkros,ilkross,sonrosa ,sonros;
     public int puan = 0;
     public Text puangoster;
     public Transform top;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform camera;
+    public Transform playerBody;
+
+    [Header("MOVEMENT")] 
+    [SerializeField] private float sideMovementSpeed;
+    [SerializeField] private float forwardMovementSpeed;
+
+    [Header("ROTATE")] 
+    [SerializeField] private float rotationSpeed;
+    [SerializeField] private Vector3 lastMouseRot;
+
+    [SerializeField] private float egeRotationSpeed;
+
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(1*Time.deltaTime,0,0);
+            transform.Translate(Vector3.right * Time.deltaTime * forwardMovementSpeed);
         }
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(-1*Time.deltaTime,0,0);
+            transform.Translate(-1*Time.deltaTime * forwardMovementSpeed,0,0);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(0,0,1*Time.deltaTime);
+            transform.Translate(0,0,Time.deltaTime * sideMovementSpeed);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(0,0,-1*Time.deltaTime);
+            transform.Translate(0,0,-1*Time.deltaTime * sideMovementSpeed);
         }
-        if (Input.GetKey(KeyCode.G))
-        {
-            transform.Rotate(0,1*Time.maximumParticleDeltaTime,0);
-        }
-        if (Input.GetKey(KeyCode.H))
-        {
-            transform.Rotate(0,-1*Time.maximumParticleDeltaTime,0);
-        }
-
-
-        if (Input.GetMouseButton(1))
-        {
-
-
-            ilkross = Input.mousePosition;
-        }
-        else if (Input.GetMouseButton(1))
-            {
-                transform.Rotate(0,0,1*Time.maximumParticleDeltaTime);
-                float zrotation = Mathf.Clamp(transform.rotation.z,-5.52f, 5.52f);
-                transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.eulerAngles.y, zrotation);
-                sonrosa = Input.mousePosition;
-                float farkkk = sonrosa - ilkross;
-                transform.rotation(0, 0, farkk * Time.deltaTime);
-                
-            }
         
         
+
+        // var delta = ((Input.mousePosition) - lastMouseRot).normalized;
+        //
+        // Debug.Log("Rotation " + delta);
+        //
+        // transform.Rotate(Vector3.up * delta.x * rotationSpeed * Time.deltaTime);
+        //
+        // lastMouseRot = Input.mousePosition;
+
+
+
+        // EGE'NİN KODU
+        // if (Input.GetKey(KeyCode.H))
+        // {
+        //     transform.Rotate(0,1*Time.maximumParticleDeltaTime * rotationSpeed ,0);
+        // }
+        // if (Input.GetKey(KeyCode.G))
+        // {
+        //     transform.Rotate(0,-1*Time.maximumParticleDeltaTime * rotationSpeed,0);
+        // }
+
+        
+        
+        /// 
+        
+            
+            // transform.Rotate(0,0,1*Time.maximumParticleDeltaTime);
+            // float zrotation = Mathf.Clamp(transform.rotation.z,-5.52f, 5.52f);
+            // transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.eulerAngles.y, zrotation);
+            
+            // Vector3 farkkk = sonrosa - ilkross;
+            // var newRotate = new Vector3( farkkk.y, -farkkk.x,0 ) * Time.deltaTime * egeRotationSpeed;
+            // camera.Rotate(Vector3.forward * farkkk.y);
+            // camera.Rotate(Vector3.down * farkkk.x);
+
+            float inputX = Input.GetAxis("Mouse X") * Time.deltaTime * egeRotationSpeed;
+            float inputY = Input.GetAxis("Mouse Y") * Time.deltaTime * egeRotationSpeed;
+
+            inputY = Mathf.Clamp(-inputY, -90, 90);
+            transform.localRotation = Quaternion.Euler(inputY, 0,0);
+            playerBody.Rotate(Vector3.up * inputX);
+            // transform.Rotate(inputX * Vector3.down);
            
             
+        //
+        //
+        // if (Input.GetMouseButton(0))
+        // {
+        //     ilkros = Input.mousePosition;
+        //     
+        //     transform.Rotate(0,0,-1*Time.maximumParticleDeltaTime);
+        //     float zzrotation = Mathf.Clamp(transform.rotation.z,-5.52f, 5.52f);
+        //     transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, zzrotation);
+        //     sonros = Input.mousePosition;
+        //     float farkk = sonros - ilkros;
+        //     transform.rotation(0, 0, farkk * Time.deltaTime);
+        // }
+        //
 
-        
 
-        if (Input.GetMouseButton(0))
-        {
-            ilkros = Input.mousePosition;
-        }
-
-      else  if (Input.GetMouseButton(0))
-        {
-            
-            transform.Rotate(0,0,-1*Time.maximumParticleDeltaTime);
-            float zzrotation = Mathf.Clamp(transform.rotation.z,-5.52f, 5.52f);
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, zzrotation);
-            sonros = Input.mousePosition;
-            float farkk = sonros - ilkros;
-            transform.rotation(0, 0, farkk * Time.deltaTime);
-        }
-        
-            
-
-        }
+    }
         
         
         
       //  top.Rotate(0,Input.GetAxis("Horizontal"),0);
-    }
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "mavi")
