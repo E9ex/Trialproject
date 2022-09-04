@@ -6,6 +6,10 @@ TagManager:
   tags:
   - target
   - hedef
+  - mavi
+  - sari
+  - kirmizi
+  - siyah
   layers:
   - Default
   - TransparentFX

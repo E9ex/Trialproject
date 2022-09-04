@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,8 @@ using UnityEngine.UI;
 
 public class yazi : MonoBehaviour
 {
-    public float toplampuan;
-    public Text puanyazisi;
+   /* public int puan = 0;
+    public Text puangoster;
     void Start()
     {
         
@@ -18,10 +19,13 @@ public class yazi : MonoBehaviour
         
     }
 
-    public void Puanekle(float puan)
+    public void OnTriggerEnter(Collider other)
     {
-        toplampuan +=puan;
-        puanyazisi.text="puan = "+ toplampuan;
-
+        if (other.gameObject.tag == "mavi")
+        {
+            puan++;
+            puangoster.text = "puan" + puan;
+        }
     }
+    */
 }
