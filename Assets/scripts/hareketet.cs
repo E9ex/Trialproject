@@ -83,7 +83,7 @@ public class hareketet : MonoBehaviour
             float inputY = Input.GetAxis("Mouse Y") * Time.deltaTime * egeRotationSpeed;
 
             inputY = Mathf.Clamp(-inputY, -90, 90);
-            transform.localRotation = Quaternion.Euler(inputY, 0,0);
+            transform.localRotation = Quaternion.Euler(inputY, 0,0) ;
             playerBody.Rotate(Vector3.up * inputX);
             // transform.Rotate(inputX * Vector3.down);
            
