@@ -23,13 +23,13 @@ public class hareketet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.S))
-            transform.Translate(Vector3.right * Time.deltaTime * forwardMovementSpeed);
-        if (Input.GetKey(KeyCode.W))
-            transform.Translate(-1*Time.deltaTime * forwardMovementSpeed,0,0);
         if (Input.GetKey(KeyCode.D))
-            transform.Translate(0,0,Time.deltaTime * sideMovementSpeed);
+            transform.Translate(Vector3.right * Time.deltaTime * forwardMovementSpeed);
         if (Input.GetKey(KeyCode.A))
+            transform.Translate(-1*Time.deltaTime * forwardMovementSpeed,0,0);
+        if (Input.GetKey(KeyCode.W))
+            transform.Translate(0,0,Time.deltaTime * sideMovementSpeed);
+        if (Input.GetKey(KeyCode.S))
             transform.Translate(0,0,-1*Time.deltaTime * sideMovementSpeed);
         
 
