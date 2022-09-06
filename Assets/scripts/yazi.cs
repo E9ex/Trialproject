@@ -1,11 +1,10 @@
-
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class yazi : MonoBehaviour
 {
     public Transform player;
-    public Text pointtext;
+    public TextMeshProUGUI pointtext;
 
     // Update is called once per frame
     void Update()
