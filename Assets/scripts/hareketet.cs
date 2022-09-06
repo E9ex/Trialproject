@@ -11,6 +11,8 @@ public class hareketet : MonoBehaviour
     public Transform top;
     public Transform camera;
     public Transform playerBody;
+    
+   
 
     [Header("MOVEMENT")] 
     [SerializeField] private float sideMovementSpeed;
@@ -21,7 +23,15 @@ public class hareketet : MonoBehaviour
     [SerializeField] private Vector3 lastMouseRot;
 
     [SerializeField] private float egeRotationSpeed;
+    private float Xrotation = 0f;
 
+    void start()
+
+    {
+        Cursor.lockState = CursorLockMode.Locked;// ekranı kitlemeye yarıyormus sanırım.
+
+    }
+    
 
     // Update is called once per frame
     void Update()
@@ -64,6 +74,47 @@ public class hareketet : MonoBehaviour
         // {
         //     transform.Rotate(0,-1*Time.maximumParticleDeltaTime * rotationSpeed,0);
         // }
+
+        
+        
+        
+            
+            // transform.Rotate(0,0,1*Time.maximumParticleDeltaTime);
+            // float zrotation = Mathf.Clamp(transform.rotation.z,-5.52f, 5.52f);
+            // transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.eulerAngles.y, zrotation);
+            
+            // Vector3 farkkk = sonrosa - ilkross;
+            // var newRotate = new Vector3( farkkk.y, -farkkk.x,0 ) * Time.deltaTime * egeRotationSpeed;
+            // camera.Rotate(Vector3.forward * farkkk.y);
+            // camera.Rotate(Vector3.down * farkkk.x);
+// videodan gordugum kdriyla yazdim bişiler.
+            float inputX = Input.GetAxis("Mouse X") * Time.deltaTime * egeRotationSpeed;
+            float inputY = Input.GetAxis("Mouse Y") * Time.deltaTime * egeRotationSpeed;
+            Xrotation  -= inputY;
+        
+            
+            Xrotation = Mathf.Clamp(Xrotation, -90f, 90f);
+           // inputY = Mathf.Clamp(-inputY, -90, 90);
+            transform.localRotation = Quaternion.Euler(Xrotation, 0f,0f) ;
+            playerBody.Rotate(Vector3.up * inputX);
+            // transform.Rotate(inputX * Vector3.down);
+           
+            
+        //
+        //
+        // if (Input.GetMouseButton(0))
+        // {
+        //     ilkros = Input.mousePosition;
+        //     
+        //     transform.Rotate(0,0,-1*Time.maximumParticleDeltaTime);
+        //     float zzrotation = Mathf.Clamp(transform.rotation.z,-5.52f, 5.52f);
+        //     transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, zzrotation);
+        //     sonros = Input.mousePosition;
+        //     float farkk = sonros - ilkros;
+        //     transform.rotation(0, 0, farkk * Time.deltaTime);
+        // }
+        //
+
 
     }
         
