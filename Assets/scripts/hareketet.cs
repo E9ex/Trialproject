@@ -45,12 +45,5 @@ public class hareketet : MonoBehaviour
 
     }
     
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "mavi")
-        {
-            puan++;
-            puangoster.text = "puan" + puan;
-        }
-    }
+    
 }

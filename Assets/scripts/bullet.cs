@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
+   public yazi yazimiz;
+    private void Awake()
+    {
+       FindObjectOfType<yazi>(yazimiz);
+    }
+
     public Rigidbody rb;
     public float bulletforce;
   //  public GameObject mermiizz;
@@ -17,15 +23,54 @@ public class bullet : MonoBehaviour
 
     public void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("hedef"));
+        
+        if (other.gameObject.CompareTag("mavi"))
         {
             Debug.Log("Collided!" + other.gameObject.name);
             rb.isKinematic = true;
             rb.useGravity = false;
             rb.constraints = RigidbodyConstraints.FreezePosition;
+            
         }
+        if (other.gameObject.CompareTag("kirmizi"))
+        {
+            Debug.Log("Collided!" + other.gameObject.name);
+            rb.isKinematic = true;
+            rb.useGravity = false;
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+         
+        }
+        if (other.gameObject.CompareTag("siyah"))
+        {
+            Debug.Log("Collided!" + other.gameObject.name);
+            rb.isKinematic = true;
+            rb.useGravity = false;
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+            
+        }
+        if (other.gameObject.CompareTag("sari"))
+        {
+            Debug.Log("Collided!" + other.gameObject.name);
+            rb.isKinematic = true;
+            rb.useGravity = false;
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+           
+        }
+
+        if (other.gameObject.CompareTag("kirmizi"))
+            yazimiz.Addpoint(10);
+        
+            if (other.gameObject.CompareTag("sari"))
+                yazimiz.Addpoint(20);
+            if (other.gameObject.CompareTag("sari"))
+                yazimiz.Addpoint(15);
+            if (other.gameObject.CompareTag("mavi"))
+                yazimiz.Addpoint(5);
+
     }
+
     
+
 }
 
 
