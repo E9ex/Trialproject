@@ -7,7 +7,7 @@ public class bullet : MonoBehaviour
    
     private void Awake()
     {
-        yazimiz.canvas = FindObjectOfType<CanvasRenderer>();
+        yazimiz = FindObjectOfType<yazi>();
     }
 
     public Rigidbody rb;
