@@ -29,7 +29,7 @@ public class MouseAim : MonoBehaviour
 
         var currentPos = Input.mousePosition;
         
-        Debug.Log("X Rotation " + (currentPos));
+    
 
         lastPos = currentPos;
         

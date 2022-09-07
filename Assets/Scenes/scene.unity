@@ -273,6 +273,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2025849833}
   pointtext: {fileID: 278239904}
+  canvas: {fileID: 0}
+  score: 0
 --- !u!1 &617791062
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,6 +497,7 @@ GameObject:
   - component: {fileID: 746262008}
   - component: {fileID: 746262007}
   - component: {fileID: 746262010}
+  - component: {fileID: 746262011}
   m_Layer: 0
   m_Name: sari
   m_TagString: sari
@@ -597,6 +600,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &746262011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746262005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e8b5f9b62e6f49aca598bbf4e0c1a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,6 +725,7 @@ GameObject:
   - component: {fileID: 996701395}
   - component: {fileID: 996701394}
   - component: {fileID: 996701397}
+  - component: {fileID: 996701398}
   m_Layer: 0
   m_Name: kirmizi
   m_TagString: kirmizi
@@ -812,6 +828,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &996701398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996701392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e8b5f9b62e6f49aca598bbf4e0c1a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1061282179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,6 +1082,7 @@ GameObject:
   - component: {fileID: 1359591991}
   - component: {fileID: 1359591990}
   - component: {fileID: 1359591993}
+  - component: {fileID: 1359591994}
   m_Layer: 0
   m_Name: siyah
   m_TagString: siyah
@@ -1156,6 +1185,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1359591994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359591988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e8b5f9b62e6f49aca598bbf4e0c1a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1593904490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1211,7 @@ GameObject:
   - component: {fileID: 1593904493}
   - component: {fileID: 1593904491}
   - component: {fileID: 1593904497}
+  - component: {fileID: 1593904498}
   m_Layer: 0
   m_Name: mavi
   m_TagString: mavi
@@ -1288,6 +1330,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1593904498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593904490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e8b5f9b62e6f49aca598bbf4e0c1a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1809878989
 GameObject:
   m_ObjectHideFlags: 0
