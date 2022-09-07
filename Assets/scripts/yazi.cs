@@ -5,7 +5,8 @@ public class yazi : MonoBehaviour
 {
     public Transform player;
     public TextMeshProUGUI pointtext;
-     int score = 0;
+    public CanvasRenderer canvas;
+     public int score = 0;
 
     // Update is called once per frame
     void Update()
@@ -17,7 +18,7 @@ public class yazi : MonoBehaviour
     public void Updatetext()
     {
         pointtext.text = score.ToString();
-        
+
     }
 
     public void Addpoint(int point)

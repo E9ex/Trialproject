@@ -4,9 +4,10 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
    public yazi yazimiz;
+   
     private void Awake()
     {
-       FindObjectOfType<yazi>(yazimiz);
+        yazimiz.canvas = FindObjectOfType<CanvasRenderer>();
     }
 
     public Rigidbody rb;
@@ -59,14 +60,13 @@ public class bullet : MonoBehaviour
 
         if (other.gameObject.CompareTag("kirmizi"))
             yazimiz.Addpoint(10);
-        
-            if (other.gameObject.CompareTag("sari"))
+        if (other.gameObject.CompareTag("sari"))
                 yazimiz.Addpoint(20);
             if (other.gameObject.CompareTag("sari"))
                 yazimiz.Addpoint(15);
             if (other.gameObject.CompareTag("mavi"))
                 yazimiz.Addpoint(5);
-
+          
     }
 
     
